@@ -5,13 +5,14 @@
 // Description: Write a program to convert time from a 24 hour notation to 12 hour notation.
 
 #include <iostream>
+#include <iomanip>
 
 int main() {
 
-    int hour = 0;
-    int min = 0;
-    int sec = 0; // Here I am defining the what each integer equals in time. Each integer starts at zero and is given a true value further into the program.
-    int hourt = 0;
+    int hour = 00;
+    float min = 00;
+    float sec = 00; // Here I am defining the what each integer equals in time. Each integer starts at zero and is given a true value further into the program.
+    int hourt = 00;
 
     std::cout << "Welcome! Give a 24 hour time to convert to 12 hour time in the following format:" << std::endl;
     std::cout << "Hour" << std::endl;
@@ -19,7 +20,7 @@ int main() {
     std::cout << "Second" << std::endl;
 
     std::cin >> hour >> min >> sec; //Here, the user will insert the time.
-
+    
     std::cout << "The time in 12 hour format is:" << std::endl;
 
     if (hour == 0 && hour != 12) { // if 24 hour = 0 but not equal to 12, then the time = 12AM
@@ -32,10 +33,20 @@ int main() {
         hourt = hour - 12;
     } // Since the only thing that changes between 24 and 12 hour time is hours, there is no need to change the minutes and seconds.
 
-    if (hour < 12 && hour != 0) {
-        std::cout << hourt << ":" << min << ":" << sec << "AM" << std::endl; //Here, if the 24 hour time is less than 12, but not equal to 0, then the 12 hour time is morning(AM).
-    } else if (hour > 12 && hour != 24) {                                             
-        std::cout << hourt << ":" << min << ":" << sec << "PM" << std::endl; //Here, if the 24 hour time is greater than 12, but not equal to 24, then the 12 hour time is afternoon(PM).
+
+
+    if (hour < 12 && hour >= 0) {
+        if (min < 10 || sec <10) {
+            std::cout << hourt << ":" << std::setw(2) << std::setfill('0') << min << ":" << std::setw(2) << std::setfill('0') << sec << "AM" << std::endl; //Here, if the 24 hour time is less than 12, but not equal to 0, then the 12 hour time is morning(AM).
+        } else {
+            std::cout << hourt << ":" << min << ":" << sec << "AM" << std::endl;
+        }
+    } else if (hour > 12 && hour <= 24) {                                             
+        if (min < 10 || sec <10) {
+            std::cout << hourt << ":" << std::setw(2) << std::setfill('0') << min << ":" << std::setw(2) << std::setfill('0') << sec << "PM" << std::endl; //Here, if the 24 hour time is less than 12, but not equal to 0, then the 12 hour time is morning(AM).
+        } else {
+            std::cout << hourt << ":" << min << ":" << sec << "PM" << std::endl;
+        } //Here, if the 24 hour time is greater than 12, but not equal to 24, then the 12 hour time is afternoon(PM).
     }
 
 
