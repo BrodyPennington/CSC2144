@@ -2,7 +2,7 @@
 // Lab: Lab 2
 // Due Date: 9/11/2023
 // Filename: Lab1.cpp
-// Description: Take three inputs (Student name, SSN, User ID, and password) and output everything with the SSN and password hidden with asterisks. 
+// Description: Take three inputs (Student name, SSN, User ID, and password) and output everything with the SSN and password hidden. 
 
 
 #include <iostream>
