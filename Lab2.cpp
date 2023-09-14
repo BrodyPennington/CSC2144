@@ -11,31 +11,28 @@
 int main() {
     std::string firstName;
     std::string lastName;
-    std::string ssn;
+    std::string ssn;        // creates string variables to take text inputs and store.
     std::string userid;
     std::string password;
-    std::string::size_type privssn;
+    std::string::size_type privssn; // These are also string variables, but used to store the number of letters in a string.
     std::string::size_type privpass;
     
 
     std::cout << "Enter a student's name, social security number, user id, and password in one line:" << std::endl;
-    std::cin >> firstName >> lastName >> ssn >> userid >> password;
+    std::cin >> firstName >> lastName >> ssn >> userid >> password; // Regular cin inputs
 
-    if (ssn > 9) {
-        std::cout << "Invalid input, please try again!"
-    }
     
-    privssn = ssn.length();
-    privpass = password.length();
+    privssn = ssn.length(); //This reads the length of the ssn input and stores.
+    privpass = password.length(); // This reads the length of the password input and stores.
 
-    for (int x = 0; x < privssn; x++) {
-        ssn[x] = 'x';
+    for (int x = 0; x < privssn; x++) { // This replaces the ssn with x's.
+        ssn[x] = 'x';         // As long as x < privssn, ssn[0-9] (since ssn's are only 9 numbers) is replaced with x.
     }
     for (int y = 0; y < privpass; y++) {
-        password[y] = 'x';
+        password[y] = 'x';  // This does the same as above, just with the password.
     }
 
-    std::cout << firstName << " " << lastName << " " << ssn << " " << userid << " " << password;
+    std::cout << firstName << " " << lastName << " " << ssn << " " << userid << " " << password; // New output with x's.
 
 
 
