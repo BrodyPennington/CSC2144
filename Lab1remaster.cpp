@@ -8,7 +8,7 @@
 #include <iomanip>
 
 void input(int& hour, int& minute, int& second) {
-    std::cout << "Enter the time in the following format: Hour Minute Second" << std::endl;
+    std::cout << "Enter the 24 hour time in the following format: Hour Minute Second" << std::endl;
     std::cin >> hour >> minute >> second;
 } 
 
@@ -42,8 +42,6 @@ int main() {
     int hour, minute, second;
     int hourTwelve;
     bool meridian = false; // AM = false, PM = true
-
-    // tertiary
 
     input(hour, minute, second);
     findMeridian(hour, meridian);
