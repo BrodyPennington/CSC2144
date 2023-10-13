@@ -27,7 +27,7 @@ void readInput(Computer& c1) { //creates a new (reference) structure of Computer
   
     std::cout << "Enter processor type: ";
     std::cin.ignore();
-    std::getline(std::cin, c1.cpu); in of processor
+    std::getline(std::cin, c1.cpu); // in of processor
   
     std::cout << "Enter the size of RAM (in GB): ";
     std::cin >> c1.ram; // in of memory
