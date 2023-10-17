@@ -13,6 +13,7 @@ class Counter {
         int getCounter_selection; // counter option selection
 
     public:
+        int highest = 4; // ALLLLLSOOOO removes magic number when the choice is greater than 4.
 
         int i = 1; // also used to get rid of magic number when incrementing and decrementing by 1
 
@@ -39,6 +40,10 @@ class Counter {
             std::cout << "Enter the number of your choice here: ";
             std::cin >> getCounter_selection; // gets the decision of what you want to do to the counter
             std::cout << " " << std::endl;
+
+            if (getCounter_selection > highest) {
+                std::cout << "Sorry, that is not an option. Please try again!" << std::endl;
+            };
         };
 
         void increment() {
