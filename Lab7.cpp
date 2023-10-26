@@ -67,20 +67,20 @@ int main() {
     std::cout << "This car is a " << sportsCar.getModel() << " " << sportsCar.getMake() << std::endl;
                                         // calls model of sports car class    // calls make
 
-    std::cout << "Accelerating..." << std::endl;
-    for (int accel = 0; accel < 5; accel++) {
-        sportsCar.accelerate();
+    std::cout << "Accelerating..." << std::endl; 
+    for (int accel = 0; accel < 5; accel++) { 
+        sportsCar.accelerate(); // calls the accelerate function
         std::cout << "Speed: " << sportsCar.getSpeed() << "mph" << std::endl;
-    }
+    }                                   // calls speed function
     std::cout << std::endl;
 
 
     std::cout << "Braking..." << std::endl;
     for (int brake = 0; brake < 5; brake++) {
-        sportsCar.brake();
+        sportsCar.brake(); // calls braking function
         std::cout << "Speed: " << sportsCar.getSpeed() << "mph" << std::endl;
 
-        if (sportsCar.getSpeed() == 0) {
+        if (sportsCar.getSpeed() == 0) { // once speed hits zero then display:
             std::cout << sportsCar.getModel() << " " << sportsCar.getMake() << " has now stopped." << std::endl;
         }
      }
