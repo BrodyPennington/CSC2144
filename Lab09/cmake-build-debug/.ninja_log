@@ -1,0 +1,14 @@
+# ninja log v5
+6	634	7211556913218655	CMakeFiles/Lab09exe.dir/Lab09.obj	ccaa23d249ddbdae
+17	685	7211556913723230	CMakeFiles/Lab09exe.dir/RomanNumeral.obj	d677bf7f2c0e8b6e
+685	832	7211556915156063	Lab09exe.exe	f1af2af78909423a
+5	601	7211568344745055	CMakeFiles/Lab09exe.dir/Lab09.obj	ccaa23d249ddbdae
+7	672	7211573801653381	CMakeFiles/Lab09exe.dir/RomanNumeral.obj	d677bf7f2c0e8b6e
+673	864	7211573803495731	Lab09exe.exe	f1af2af78909423a
+6	653	7211574134803878	CMakeFiles/Lab09exe.dir/RomanNumeral.obj	d677bf7f2c0e8b6e
+654	827	7211574136456259	Lab09exe.exe	f1af2af78909423a
+18	729	7211577303484735	CMakeFiles/Lab09exe.dir/RomanNumeral.obj	d677bf7f2c0e8b6e
+8	553	7211577460876607	CMakeFiles/Lab09exe.dir/Lab09.obj	ccaa23d249ddbdae
+554	708	7211577462372059	Lab09exe.exe	f1af2af78909423a
+4	622	7211578977847936	CMakeFiles/Lab09exe.dir/RomanNumeral.obj	d677bf7f2c0e8b6e
+624	805	7211578979615175	Lab09exe.exe	f1af2af78909423a
