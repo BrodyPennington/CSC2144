@@ -14,18 +14,38 @@ int sumElements(int array[], int begin, int numElements) {
     return (array[begin] + sumElements(array, begin + 1, numElements));
 }
 
-int findLargestElement(int array[], int n) {
-    if (n == 1)
-        return array[n - 1];
+int findLargestElement(int array[], int nLarge) {
+    if (nLarge == 1)
+        return array[nLarge - 1];
 
-    int pMax = findLargestElement(array, n - 1);
+    int pMax = findLargestElement(array, nLarge - 1);
 
-    if (pMax > array[n - 1])
+    if (pMax > array[nLarge - 1])
         return pMax;
     else
-        return array[n - 1];
+        return array[nLarge - 1];
 }
 
+int findSmallestElement(int array[], int nSmall) {
+    if (nSmall == 1)
+        return array[0];
+    return std::min(array[nSmall-1], findSmallestElement(array, nSmall-1));
+}
+
+void printElement(int array[], int numPrintSize) {
+    static int i;
+    if (i == numPrintSize) {
+        i = 0;
+        std::cout << std::endl;
+        return;
+    }
+
+    std::cout << array[i] << " ";
+    i++;
+
+    printElement(array, numPrintSize);
+
+}
 
 int main() {
     int numElements;
@@ -39,11 +59,11 @@ int main() {
         std::cin >> array[i];
     }
 
-    int sum = sumElements(array, 0, numElements);
-
-    std::cout << "Sum of array elements: " << sum << std::endl;
-
-    std::cout << "Largest element in the array: " << findLargestElement(array, numElements);
+    std::cout << "Sum of array elements: " << sumElements(array, 0, numElements) << std::endl;
+    std::cout << "Largest element in the array: " << findLargestElement(array, numElements) << std::endl;
+    std::cout << "Smallest element in the array: " << findSmallestElement(array, numElements) << std::endl;
+    std::cout << "Elements in array: ";
+    printElement(array, numElements);
 
 
 }
